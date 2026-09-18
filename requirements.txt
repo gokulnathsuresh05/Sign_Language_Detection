@@ -1,0 +1,26 @@
+# Sign Language Detection - pinned, conflict-free environment
+# Verified to resolve with no dependency conflicts on Windows / Python 3.11.
+#
+# Do NOT loosen these pins. The versions are tied together:
+#   tensorflow 2.17  needs numpy<2.0, protobuf<5, ml-dtypes<0.5
+#   opencv-python 4.12 needs numpy>=2   <-- this is what broke your install
+#   so opencv is held at 4.10, which is happy with numpy 1.26
+#   streamlit needs pillow<11, so pillow is held at 10.4
+
+numpy==1.26.4
+protobuf==4.25.3
+ml-dtypes==0.4.1
+
+tensorflow==2.17.0
+
+opencv-python==4.10.0.84
+opencv-contrib-python==4.10.0.84
+mediapipe==0.10.14
+jax==0.4.30
+jaxlib==0.4.30
+
+pillow==10.4.0
+pyarrow==17.0.0
+
+# Optional - only if you build the GUI in Streamlit instead of Tkinter
+# streamlit==1.38.0
